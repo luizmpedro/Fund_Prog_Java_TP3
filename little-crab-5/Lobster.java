@@ -1,4 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, and Greenfoot)
+import java.util.Random;
 
 /**
  * A lobster. Lobsters live on the beach. They like to eat crabs. (Well, in our game
@@ -13,6 +14,17 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, and Greenfoot)
 
 public class Lobster extends Actor
 {
+    private int speed;
+    private CrabWorld world;
+    
+    public Lobster(CrabWorld world) {
+        Random random = new Random();
+        this.speed = random.nextInt(5)+3;
+        this.speed = 4;
+        this.world = world;
+    }
+    
+    
     /**
      * Do whatever lobsters do.
      */
@@ -20,7 +32,7 @@ public class Lobster extends Actor
     {
         turnAtEdge();
         randomTurn();
-        move(5);
+        move(this.speed);
         lookForCrab();
     }
 
@@ -56,9 +68,10 @@ public class Lobster extends Actor
     {
         if ( isTouching(Crab.class) ) 
         {
-            removeTouching(Crab.class);
             Greenfoot.playSound("au.wav");
-            Greenfoot.stop();
+            world.addScore(-50);
+            Random random = new Random();
+            this.setLocation(random.nextInt(559)+1, random.nextInt(559)+1);
         }
     }
 }

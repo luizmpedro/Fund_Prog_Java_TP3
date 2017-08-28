@@ -15,16 +15,17 @@ public class Crab extends Actor
     private GreenfootImage image1;
     private GreenfootImage image2;
     private int wormsEaten;
-    
+    private CrabWorld world;
     /**
      * Create a crab and initialize its two images.
      */
-    public Crab()
+    public Crab(CrabWorld world)
     {
         image1 = new GreenfootImage("crab.png");
         image2 = new GreenfootImage("crab2.png");
         setImage(image1);
         wormsEaten = 0;
+        this.world = world;
     }
         
     /** 
@@ -81,14 +82,7 @@ public class Crab extends Actor
         {
             removeTouching(Worm.class);
             Greenfoot.playSound("slurp.wav");
-            
-            wormsEaten = wormsEaten + 1;
-            
-            if (wormsEaten == 8) 
-            {
-                Greenfoot.playSound("fanfare.wav");
-                Greenfoot.stop();
-            }
+            this.world.addScore(20);
         }
     }
 }
