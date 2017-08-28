@@ -7,10 +7,10 @@ Este TP está dividido em três etapas. As etapas 1 e 2 são alterações de có
 1. Faça com que as lagostas se movimentem com velocidades aleatórias. Cada lagosta, ao ser criada, deve estabelecer sua velocidade com um valor aleatório entre 3 e 8.
 1. Implemente um sistema de temporização, como feito na Etapa 5.
 1. Modifique as regras de derrota e vitória do jogo da seguinte forma:
-1. Ao comer um Worm, o jogador ganha 20 pontos;
-1. Ao encostar em uma lagosta, o jogador perde 50 pontos;
-1. O jogador perde se sua pontuação ficar negativa ou se o tempo esgotar e sua pontuação estiver abaixo de 100
-1. O jogador ganha se conseguir atingir 200 pontos ou se o tempo esgotar e ele tiver pontuação maior ou igual a 100 pontos
+	1. Ao comer um Worm, o jogador ganha 20 pontos;
+	1. Ao encostar em uma lagosta, o jogador perde 50 pontos;
+	1. O jogador perde se sua pontuação ficar negativa ou se o tempo esgotar e sua pontuação estiver abaixo de 100
+	1. O jogador ganha se conseguir atingir 200 pontos ou se o tempo esgotar e ele tiver pontuação maior ou igual a 100 pontos
 1. Faça com que a pontuação do jogador seja exibida na tela.
 1. Faça com que o tempo restante seja exibido na dela
 1. Se o jogador perder, além do comportamento atual, exiba também uma mensagem no centro da tela informando o jogador sobre a derrota.
